@@ -20,6 +20,13 @@ public class TestaCalculoMedia {
             } else {
                 aluno = new Aluno(nome);
             }
+            System.out.println("É aluno de Humanas? (1 = Sim, 0 = Não)");
+            resposta = scanner.nextInt();
+            if (resposta == 1) {
+                aluno = new AlunoDeExatas(nome);
+            } else {
+                aluno = new Aluno(nome);
+            }
         }
 
         aluno.perguntaNotas();
